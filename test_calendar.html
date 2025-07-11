@@ -1,27 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>テストページ</title>
+  <style>
+    .tabWrap ul { list-style: none; padding: 0; }
+    .tabWrap li { display: inline-block; margin-right: 10px; cursor: pointer; padding: 5px 10px; background: #eee; }
+    .tabWrap li.on { background: #007acc; color: #fff; font-weight: bold; }
+    .tb-calendar { margin-top: 20px; border-collapse: collapse; width: 100%; }
+    .tb-calendar td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .tb-calendar .icon { display: block; margin-top: 4px; font-size: 18px; }
+  </style>
+</head>
+<body>
+
 <h2>テストページ</h2>
 
 <div class="tabWrap mb10">
   <ul id="top_tabs">
-  <li class=""
-      data-href="https://as.its-kenpo.or.jp/apply/empty_new?s=PU1qTjMwRFpwWlNaMUpIZDlrSGR3MVda"
-      data-title="ホテルハーヴェスト那須申込">
-    <span>ホテルハーヴェスト那須</span></a>
-  </li>
-  <li class="on"
-      data-href="https://as.its-kenpo.or.jp/apply/empty_new?s=PUF6TjMwRFpwWlNaMUpIZDlrSGR3MVda"
-      data-title="ホテルハーヴェスト南紀田辺申込">
-    <span>ホテルハーヴェスト南紀田辺</span></a>
-  </li>
-  <li class=""
-      data-href="https://as.its-kenpo.or.jp/apply/empty_new?s=XXXXXXXXYYYYYYYYZZZZZ12345"
-      data-title="ホテル test house">
-    <span>ホテル test House</span></a>
-  </li>
+    <li class="on" data-target="calendar_PU1qTjMwRFpwWlNaMUpIZDlrSGR3MVda"><span>ホテルハーヴェスト那須</span></li>
+    <li class=""    data-target="calendar_PUF6TjMwRFpwWlNaMUpIZDlrSGR3MVda"><span>ホテルハーヴェスト南紀田辺</span></li>
+    <li class=""    data-target="calendar_XXXXXXXXYYYYYYYYZZZZZ12345"><span>ホテル test House</span></li>
   </ul>
 </div>
+
+<!-- 🗓️ カレンダー1 -->
 <table id="calendar_PU1qTjMwRFpwWlNaMUpIZDlrSGR3MVda" class="tb-calendar">
-  <!-- ホテルハーヴェスト那須のカレンダー -->
-  <tr>
+      <tr>
     <td data-join-time="2025-07-01" data-night-count="1"><p>1</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-02" data-night-count="1"><p>2</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-03" data-night-count="1"><p>3</p><span class="icon">☓</span></td>
@@ -36,9 +41,9 @@
     <td data-join-time="2025-07-12" data-night-count="1"><p>12</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-13" data-night-count="1"><p>13</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-14" data-night-count="1"><p>14</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-15" data-night-count="1"><p>15</p><span class="icon">△</span></td>
+    <td data-join-time="2025-07-15" data-night-count="1"><p>15</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-16" data-night-count="1"><p>16</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-17" data-night-count="1"><p>17</p><span class="icon">☓</span></td>
+    <td data-join-time="2025-07-17" data-night-count="1"><p>17</p><span class="icon">〇</span></td>
     <td data-join-time="2025-07-18" data-night-count="1"><p>18</p><span class="icon">△</span></td>
     <td data-join-time="2025-07-19" data-night-count="1"><p>19</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-20" data-night-count="1"><p>20</p><span class="icon">☓</span></td>
@@ -51,14 +56,13 @@
     <td data-join-time="2025-07-27" data-night-count="1"><p>27</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-28" data-night-count="1"><p>28</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-29" data-night-count="1"><p>29</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-30" data-night-count="1"><p>30</p><span class="icon">〇</span></td>
-    <td data-join-time="2025-07-31" data-night-count="1"><p>31</p><span class="icon">△</span></td>
-  </tr>
+    <td data-join-time="2025-07-30" data-night-count="1"><p>30</p><span class="icon">☓</span></td>
+    <td data-join-time="2025-07-31" data-night-count="1"><p>31</p><span class="icon">☓</span></td>
 </table>
 
-<table id="calendar_PUF6TjMwRFpwWlNaMUpIZDlrSGR3MVda" class="tb-calendar">
-  <!-- ホテルハーヴェスト南紀田辺のカレンダー -->
-  <tr>
+<!-- 🗓️ カレンダー2（非表示） -->
+<table id="calendar_PUF6TjMwRFpwWlNaMUpIZDlrSGR3MVda" class="tb-calendar" style="display: none;">
+    <tr>
     <td data-join-time="2025-07-01" data-night-count="1"><p>1</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-02" data-night-count="1"><p>2</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-03" data-night-count="1"><p>3</p><span class="icon">☓</span></td>
@@ -76,25 +80,25 @@
     <td data-join-time="2025-07-15" data-night-count="1"><p>15</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-16" data-night-count="1"><p>16</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-17" data-night-count="1"><p>17</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-18" data-night-count="1"><p>18</p><span class="icon">△</span></td>
+    <td data-join-time="2025-07-18" data-night-count="1"><p>18</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-19" data-night-count="1"><p>19</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-20" data-night-count="1"><p>20</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-21" data-night-count="1"><p>21</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-22" data-night-count="1"><p>22</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-23" data-night-count="1"><p>23</p><span class="icon">☓</span></td>
+    <td data-join-time="2025-07-22" data-night-count="1"><p>22</p><span class="icon">△</span></td>
+    <td data-join-time="2025-07-23" data-night-count="1"><p>23</p><span class="icon">〇</span></td>
     <td data-join-time="2025-07-24" data-night-count="1"><p>24</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-25" data-night-count="1"><p>25</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-26" data-night-count="1"><p>26</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-27" data-night-count="1"><p>27</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-28" data-night-count="1"><p>28</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-29" data-night-count="1"><p>29</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-30" data-night-count="1"><p>30</p><span class="icon">〇</span></td>
-    <td data-join-time="2025-07-31" data-night-count="1"><p>31</p><span class="icon">△</span></td>
+    <td data-join-time="2025-07-30" data-night-count="1"><p>30</p><span class="icon">☓</span></td>
+    <td data-join-time="2025-07-31" data-night-count="1"><p>31</p><span class="icon">☓</span></td>
   </tr>
 </table>
 
-<table id="calendar_XXXXXXXXYYYYYYYYZZZZZ12345" class="tb-calendar">
-  <!-- ホテル test Houseのカレンダー -->
+<!-- 🗓️ カレンダー3（非表示） -->
+<table id="calendar_XXXXXXXXYYYYYYYYZZZZZ12345" class="tb-calendar" style="display: none;">
   <tr>
     <td data-join-time="2025-07-01" data-night-count="1"><p>1</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-02" data-night-count="1"><p>2</p><span class="icon">☓</span></td>
@@ -120,8 +124,8 @@
     <td data-join-time="2025-07-22" data-night-count="1"><p>22</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-23" data-night-count="1"><p>23</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-24" data-night-count="1"><p>24</p><span class="icon">☓</span></td>
-    <td data-join-time="2025-07-25" data-night-count="1"><p>25</p><span class="icon">〇</span></td>
-    <td data-join-time="2025-07-26" data-night-count="1"><p>26</p><span class="icon">△</span></td>
+    <td data-join-time="2025-07-25" data-night-count="1"><p>25</p><span class="icon">☓</span></td>
+    <td data-join-time="2025-07-26" data-night-count="1"><p>26</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-27" data-night-count="1"><p>27</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-28" data-night-count="1"><p>28</p><span class="icon">☓</span></td>
     <td data-join-time="2025-07-29" data-night-count="1"><p>29</p><span class="icon">☓</span></td>
@@ -129,3 +133,23 @@
     <td data-join-time="2025-07-31" data-night-count="1"><p>31</p><span class="icon">△</span></td>
   </tr>
 </table>
+
+<!-- 🔄 JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll("#top_tabs li");
+  const calendars = document.querySelectorAll(".tb-calendar");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      const targetId = tab.dataset.target;
+
+      // 全てのカレンダー非表示
+      calendars.forEach(table => {
+        table.style.display = "none";
+      });
+
+      // 対象カレンダー表示
+      const targetTable = document.getElementById(targetId);
+      if (targetTable) {
+        targetTable.style
